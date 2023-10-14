@@ -7,11 +7,19 @@ export default {
   theme: {
     extend: {
       colors:{
-        "primary-green":"#4E9F3D"
+        "primary-green":"#4E9F3D",
       },
       backgroundColor:{
-        "primary-green":"#4E9F3D"
+        "primary-green":"#4E9F3D",
+        "primary-hover":"#59cc41"
       },
+      aspectRatio : {
+        "grid" :"auto 425 / 252"
+      },
+      padding:{
+        "web":"10px 50px",
+        "mobile":"10px 20px"
+      }
 
     },
   },

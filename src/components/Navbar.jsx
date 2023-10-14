@@ -6,7 +6,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="flex justify-between items-center px-4 py-2 shadow-md relative z-[999]">
+    <div className="flex justify-between items-center h-[70px] px-4 py-2 shadow-md relative z-[999]">
       <div className="">
         <h1 className="text-primary-green font-semibold text-xl">Khana</h1>
         <p className="text-primary-green  text-sm">Kidhr hai</p>
@@ -18,17 +18,17 @@ const Navbar = () => {
       >
         <ul className="flex items-center gap-4 max-sm:flex-col ">
           <li className="cursor-pointer py-1 rounded-sm duration-300 hover:bg-primary-green hover:text-white ">
-            <Link to={"/"} className="px-3 py-2">
+            <Link to={"/"} className="px-3 py-2 text-xl">
               Home
             </Link>
           </li>
           <li className="cursor-pointer  py-1 rounded-sm duration-300 hover:bg-primary-green hover:text-white ">
-            <Link to={"/about"} className="px-3 py-2">
+            <Link to={"/about"} className="px-3 py-2 text-xl">
               About
             </Link>
           </li>
           <li className="cursor-pointer py-1 rounded-sm duration-300 hover:bg-primary-green hover:text-white ">
-            <Link to={"/faq"} className="px-3 py-2">
+            <Link to={"/faq"} className="px-3 py-2 text-xl">
               FAQ
             </Link>
           </li>
@@ -38,7 +38,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="cursor-pointer px-2 py-1 rounded-sm duration-300 hover:bg-primary-green hover:text-white ">
-            <button>Login</button>
+            <button className=" text-xl">Login</button>
           </li>
         </ul>
       </div>
