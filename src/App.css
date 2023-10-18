@@ -12,3 +12,24 @@
       -ms-overflow-style: none;  /* IE and Edge */
       scrollbar-width: none;  /* Firefox */
   }
+  .top{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    transform: translateY(0);
+    background-color: white;
+    padding: 0 0;
+
+  }
+  .top>div{
+    padding: 0;
+  }
+  .scroll-logo{
+    display: none;
+  }
+  .top .scroll-logo{
+    display:  flex!important;
+  }

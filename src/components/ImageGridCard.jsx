@@ -3,10 +3,10 @@ import { img_cdn } from '../utils/constants';
 import {PiArrowRightLight} from "react-icons/pi"
 
 const ImageGridCard = ({cards,heading}) => {
-      const crouselContainer = useRef()
+      const carouselContainer = useRef()
       
       const navigation = (dir)=>{
-        const container = crouselContainer.current;
+        const container = carouselContainer.current;
         let scrollAmount = dir=="left"?
           container.scrollLeft - (container.offsetWidth -200)
           :container.scrollLeft + (container.offsetWidth -200);
@@ -21,7 +21,7 @@ const ImageGridCard = ({cards,heading}) => {
 
   return <div className='relative'>
   <h1 className='font-bold text-3xl my-3'>{heading}</h1>
-    <div ref={crouselContainer}  className='flex gap-5  overflow-scroll scrollbar-hide '>
+    <div ref={carouselContainer}  className='flex gap-5  overflow-scroll scrollbar-hide '>
     {
         cards?.map((card)=>{
                 return <div key={card?.entityId} className='flex-shrink-0 max-sm:w-full  '>

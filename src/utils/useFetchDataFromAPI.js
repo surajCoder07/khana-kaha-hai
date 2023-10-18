@@ -8,7 +8,7 @@ const [error,setError] = useState("no error")
 
 
 useEffect(()=>{
-fetchData()
+fetchData();
 },[])
 
 const fetchData = async()=>{
