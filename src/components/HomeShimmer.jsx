@@ -59,7 +59,7 @@ const HomeShimmer = () => {
           })}
         </div>
       </div>
-      <div className="flex gap-5 flex-wrap justify-between">
+      <div className="flex gap-5 flex-wrap justify-between max-sm:justify-center">
         {[...Array(10).fill("")].map((e, index) => {
           return (
             <Shimmer

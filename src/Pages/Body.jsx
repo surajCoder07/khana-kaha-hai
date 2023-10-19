@@ -228,7 +228,7 @@ const Body = () => {
 
 
 
-      <div className="flex gap-5 flex-wrap justify-between">
+      <div className="flex gap-5 flex-wrap justify-between max-[450px]:justify-center">
         {
           filteredRestaurants?.map((res,index) => {
             
