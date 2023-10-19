@@ -148,7 +148,7 @@ const Body = () => {
 
 
 // const a = false;
-  return  filteredRestaurants.length!==0 ? (
+  return  allRestaurants.length!==0 ? (
     <div className=" overflow-hidden p-web max-sm:p-mobile">
 
 
