@@ -5,13 +5,14 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { filters } from "../utils/constants";
 import RestaurantCard from "../components/RestaurantCard";
 import { restaurants,temp } from "../utils/constants";
+import HomeShimmer from "../components/HomeShimmer";
 
 
 const Body = () => {
   const [allRestaurants,setAllRestaurants] = useState([]);
   const [filteredRestaurants,setFilteredRestaurants] = useState([])
   const [offersCards, setOffersCard] = useState([]);
-  const [isDataFetched , setIsDataFetched] = useState(false);
+  const [isDataFetched , setIsDataFetched] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
   const[notFound , setNotFound] = useState("");
   const [selectedFilter, setSelectedFilter] = useState("All");
@@ -52,10 +53,11 @@ const Body = () => {
   // fetch data 
 
   const fetchData = async ()=>{
+    try{
 
       const res = await fetch("https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=21.1702401&lng=72.83106070000001&page_type=DESKTOP_WEB_LISTING");
 
-      setIsDataFetched(res.ok)
+      // setIsDataFetched(res)
       
       const data = await res.json();
 
@@ -83,7 +85,21 @@ const Body = () => {
           temp?.data.cards[0].card.card.gridElements.infoWithStyle.info
           
           )
+      }
+      catch(error){
+        console.log(error);
 
+        setAllRestaurants(restaurants)
+        setFilteredRestaurants(restaurants)
+        setOffersCard(temp?.cards[0].card.card.gridElements.infoWithStyle.info)
+        
+  
+  
+
+
+
+
+      }
 
 
   }
@@ -131,8 +147,8 @@ const Body = () => {
 
 
 
-
-  return isDataFetched ? (
+// const a = false;
+  return  filteredRestaurants.length!==0 ? (
     <div className=" overflow-hidden p-web max-sm:p-mobile">
 
 
@@ -152,7 +168,7 @@ const Body = () => {
 
       <div className={show}>
 
-      <div className="flex items-baseline justify-center">
+      <div className="flex items-baseline justify-center ">
       
       <Link to={"/"} className="flex-[0.2]  flex-col text-center scroll-logo  " >
         <h1 className="text-primary-green font-semibold text-2xl">Khana</h1>
@@ -223,7 +239,7 @@ const Body = () => {
       </div>
     </div>
   ) : (
-    <span>loading</span>
+    <HomeShimmer/>
   );
 };
 

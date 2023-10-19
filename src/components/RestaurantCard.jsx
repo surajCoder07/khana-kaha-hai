@@ -7,7 +7,7 @@ const RestaurantCard = ({ card }) => {
   return (
     <div
       key={card?.id}
-      className=" bg-pink-100 min-h-[300px] my-4 flex-shrink-0 w-[280px] cursor-pointer max-sm:w-full  hover:shadow-md duration-200 rounded-md relative"
+      className=" bg-card shadow-md  min-h-[300px] my-4 flex-shrink-0 w-[280px] cursor-pointer max-sm:w-full  hover:shadow-lg duration-200 rounded-md relative"
     >
       <img
         src={img_cdn + card?.cloudinaryImageId}

@@ -8,10 +8,12 @@ export default {
     extend: {
       colors:{
         "primary-green":"#4E9F3D",
+        
       },
       backgroundColor:{
         "primary-green":"#4E9F3D",
-        "primary-hover":"#59cc41"
+        "primary-hover":"#59cc41",
+        "card" : "##fffaf0",
       },
       aspectRatio : {
         "grid" :"auto 425 / 252"
